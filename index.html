@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link title="timeline-styles" rel="stylesheet" href="assets/timeline3/css/themes/timeline.theme.dark.css">
+  <link title="timeline-styles" rel="stylesheet" href="assets/timeline3/css/fonts/font.ubuntu.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>@hayk</title>
+</head>
+<body>
+
+  <header>
+    <div class="overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="assets/files/jumbotron.webm" type="video/webm">
+    </video>
+
+    <div class="container-fluid" id="header">
+      <div class="row" id="header-row">
+        <div class="col-lg-6 my-auto">
+          <div id="mypiccontainer">
+            <div id="mypic"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 my-auto title">
+          <div class="slash_divider"></div>
+          <div id="aboutme">
+            <p id="myname"><b>Hayk Hakobyan</b></p>
+            <p class="mytitle">PhD candidate</p>
+            <p class="mytitle">Princeton University</p>
+            <p class="mytitle">Department of Astrophysical Sciences</p>
+            <p class="mycontact">Contact me:
+              <a href="mailto:hakobyan@astro.princeton.edu">hakobyan -at- astro.princeton.edu</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-end" id="tag-row">
+        <div class="col-lg-12">
+          <p>
+            Keywords: <mark>high energy astrophysics</mark>, <mark>compact objects</mark>, <mark>magnetic reconnection</mark>, <mark>QED processes in plasmas</mark>, <mark>particle-in-cell simulations</mark>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="assets/timeline3/js/timeline-min.js"></script>
+
+  <div class="container-fluid">
+    <div class="container subtitle" id="timeline-title">
+      <div>
+        <h1>Research experience</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div id='timeline-embed' style="width: 100%; height: 768px"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var additionalOptions = {
+      initial_zoom: 2,
+      timenav_height_percentage: 20,
+      timenav_mobile_height_percentage: 40,
+      duration: 300,
+      trackResize: false,
+      base_class: "mytimeline",
+      optimal_tick_width: 10,
+      marker_width_min: 20,
+      default_bg_color: "#2f2f2f"
+    }
+    window.timeline = new TL.Timeline('timeline-embed',
+      'assets/files/timeline.json', additionalOptions);
+  </script>
+
+
+  <div class="container">
+    <div class="subtitle">
+      <h1 class="pt-4">Publications</h1>
+    </div>
+    <div class="card-columns">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <span class="highlight">Hakobyan, H.</span>, Philippov, A., Spitkovsky, A. (2019) Effects of Synchrotron Cooling and Pair Production on Collisionless Relativistic Reconnection. ApJ 877, 53.
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <span class="highlight">Hakobyan, H.</span>, Petropoulou, M., Spitkovsky, A., Sironi, L. (2020) Secondary Energization in Compressing Plasmoids during Magnetic Reconnection. arXiv:2006.12530.
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <span class="highlight">Hakobyan, H.</span>, Beskin, V., Philippov, A. (2017) On the mean profiles of radio pulsars - II. Reconstruction of complex pulsar light curves and other new propagation effects. MNRAS 469, 2704.
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <span class="highlight">Hakobyan, H.</span>, Philippov, A., Beskin, V., Galishnikova, A., Novoselov, E., Rashkovetskyi, M. (2017) On the light-curve anomalies of radio pulsars. JPCS 012018
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <span class="highlight">Hakobyan, H.</span>, Beskin, V. (2014) The shapes of pulsar radio pulses in the plane of the sky. Astronomy Reports 58, 889.
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            Egorov, P., Guzinin, M.,
+            <span class="highlight">Hakobyan, H.</span>, Troitsky, S. (2014) Constraining new fundamental physics with multiwavelength astrometry. MNRAS 437, L90.
+          </p>
+          <small class="text-muted">
+            Link
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

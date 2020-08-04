@@ -1,0 +1,286 @@
+$main-font: 'Ubuntu Mono', monospace
+$main-fontsize-mobile: 28px
+$main-fontsize: 16px
+
+$my-image: url("../images/mypic1.png")
+
+$color-highlight: #fff899
+
+$color-unpublished: green
+$color-published: royalblue
+$color-codedev: #CD5C5C
+
+$color-undergradtimeline: lightblue
+$color-phdtimeline: yellow
+
+$small-screen: 992px
+
+@mixin gradient($direction, $list)
+  background: -webkit-linear-gradient($direction, $list)
+  background: -moz-linear-gradient($direction, $list)
+  background: -o-linear-gradient($direction, $list)
+  background: linear-gradient($direction, $list)
+
+$lightblue: #41B6E6
+$lightpink: #DB3EB1
+
+body
+  font-family: $main-font
+  @media screen and (min-width: $small-screen)
+    font-size: $main-fontsize
+  @media screen and (max-width: $small-screen)
+    font-size: $main-fontsize-mobile
+
+/* JUMBOTRON
+
+header
+  position: relative
+  background-color: black
+  height: 75vh
+  min-height: 25rem
+  width: 100%
+  overflow: hidden
+
+header video
+  position: absolute
+  top: 50%
+  left: 50%
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: 0
+  -ms-transform: translateX(-50%) translateY(-50%)
+  -moz-transform: translateX(-50%) translateY(-50%)
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  transform: translateX(-50%) translateY(-50%)
+
+header #header
+  position: relative
+  z-index: 2
+
+header .overlay
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background-color: coral
+  opacity: 0.8
+  z-index: 1
+
+#header
+  @media screen and (min-width: $small-screen)
+    height: 720px
+  @media screen and (max-width: $small-screen)
+    min-height: 720px
+
+  #tag-row p
+    line-height: 2rem
+
+#header
+  @media screen and (max-width: $small-screen)
+    #header-row
+      height: 75%
+    #tag-row
+      height: 25%
+      p
+        line-height: 2em
+      mark
+        background: transparentize($color-highlight, 0.45)
+  @media screen and (min-width: $small-screen)
+    #header-row
+      height: 90%
+    #tag-row
+      height: 10%
+
+
+/* ... avatar
+
+#mypic
+  background: $my-image
+  background-size: 75%
+  background-position: 48% 25%
+  background-repeat: no-repeat
+  width: 145%
+  height: 145%
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg)
+  transform: translateX(-50%) translateY(-50%) rotate(45deg)
+  margin: 50%
+
+#mypiccontainer
+  -ms-transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+  overflow: hidden
+
+  &:after, &:before
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0px
+    left: 0px
+    border-style: solid
+    border-color: white
+
+  &:after
+    border-top: 0px
+    border-right: 0px
+
+  &:before
+    @include gradient(right, ($lightblue, $lightpink))
+    border-bottom: 0px
+    border-left: 0px
+
+
+#mypiccontainer
+  @media screen and (min-width: $small-screen)
+    width: 350px
+    height: 350px
+    margin: 0 auto
+    margin-top: -150px
+
+    &:after, &:before
+      width: 250px
+      height: 250px
+      border-width: 4px
+
+  @media screen and (max-width: $small-screen)
+    width: 350px
+    height: 350px
+    margin: auto
+    margin-top: 25px
+    margin-bottom: 150px
+
+    &:after, &:before
+      width: 250px
+      height: 250px
+      border-width: 2px
+
+/* ... about me
+
+#aboutme
+  font-size: 1.25em
+
+  #myname
+    font-size: 1.5em
+
+.title, #header #tag-row
+  text-align: center
+
+.mytitle
+  margin-bottom: 0px
+
+.mycontact
+  font-size: 0.8em
+  margin-top: 20px
+  margin-bottom: 20px
+
+  a
+    color: #212529
+
+@media screen and (min-width: $small-screen)
+  .title, #header #tag-row
+    text-align: left
+
+  #aboutme
+    margin-left: 50px
+
+  #header .row
+    max-width: 1140px
+    margin: auto
+
+.slash_divider:before
+  font-family: monospace
+  font-size: 1em
+  color: black
+
+
+.slash_divider
+  @media screen and (max-width: $small-screen)
+    display: none
+  @media screen and (min-width: $small-screen)
+    position: absolute
+    height: 150px
+    top: -5px
+    &:before
+      content: "//\A//\A//\A//\A//\A//\A//\A//\A//"
+      position: absolute
+      text-align: left
+
+/* PUBLICATIONS
+
+.card
+  border: hidden
+
+.highlight
+  background: $color-highlight
+  padding: 2px 5px
+  display: inline-block
+
+.text-muted
+  display: none
+
+.card-columns
+  @media screen and (min-width: $small-screen)
+    column-count: 3
+  @media screen and (max-width: $small-screen)
+    column-count: 1
+
+/* TIMELINE
+
+.mytimeline
+  font-family: $main-font
+
+  .tl-attribution
+    display: none
+
+  .tl-timemarker-line-left, .tl-timemarker-line-right
+    box-shadow: none
+
+  .tl-menubar
+    display: none
+
+  .tl-slidenav-content-container
+    &:hover
+      .tl-slidenav-title, .tl-slidenav-description
+        opacity: 1
+
+    .tl-slidenav-title, .tl-slidenav-description
+      text-shadow: none !important
+      opacity: 0.45
+      color: #CCC !important
+
+  .tl-timegroup-message
+    margin-left: 40px
+    text-shadow: none
+    color: #CCC
+
+  .tl-timemarker-content-container
+    box-shadow: none !important
+    border-radius: 0px
+
+  .tl-timemarker h2
+    color: #CCC !important
+
+  .tl-timeera-color1 .tl-timeera-background
+    background-color: $color-undergradtimeline !important
+
+  .tl-timeera-color2 .tl-timeera-background
+    background-color: $color-phdtimeline !important
+
+  .tl-timeera .tl-timeera-content-container
+    border-radius: 0 !important
+
+  .tl-timeaxis-minor
+    display: none !important
+
+  #gs_01-marker .tl-timemarker-content-container, #gs_03-marker .tl-timemarker-content-container
+    background-color: $color-unpublished
+
+  #gs_02-marker .tl-timemarker-content-container, #gs_04-marker .tl-timemarker-content-container
+    background-color: $color-published
+
+  #gs_05-marker .tl-timemarker-content-container
+    background-color: $color-codedev
