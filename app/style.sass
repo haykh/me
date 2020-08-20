@@ -1,19 +1,58 @@
-$main-font: 'Ubuntu Mono', monospace
+$main-font: 'Ubuntu', serif
+$pubs-font: 'Ubuntu-mono', monospace
 $main-fontsize-mobile: 28px
 $main-fontsize: 16px
 
+$small-screen: 992px
+
 $my-image: url("../images/mypic1.png")
 
-$color-highlight: #fff899
+// COLORS PALETTE
+// $color-n1: #db3340
+// $color-n2: #e8b81a
+// $color-n3: #f7eac8
+// $color-n4: #20da9b
+// $color-n5: #28abe3
 
-$color-unpublished: green
-$color-published: royalblue
-$color-codedev: #CD5C5C
+// $color-n1: #DB3EB1
+// $color-n5: #41B6E6
 
-$color-undergradtimeline: lightblue
-$color-phdtimeline: yellow
+$colors: #3A2E39, #1E555C, #F4D8CD, #EDB183, #F15152
+$color-n1: nth($colors, 1)
+$color-n2: nth($colors, 2)
+$color-n3: nth($colors, 3)
+$color-n4: nth($colors, 4)
+$color-n5: nth($colors, 5)
 
-$small-screen: 992px
+
+$whiteish: #f2f2f2
+$grayish: #CCC
+$blackish: #2f2f2f
+
+$color-princeton: #e77500
+$color-mipt: #0080ff
+
+// COLORS:
+$grad-color-n1: $color-n3
+$grad-color-n2: $color-n2
+
+$color-jumbotron: $blackish
+$color-header-text: $whiteish
+
+$color-publication-highlight: $color-n3
+$color-tag-outline: $color-n3
+
+$color-timeline-legend-bg: $whiteish
+$color-timeline-eratext: $blackish
+$color-legend-divider: $blackish
+
+$color-unpublished: $color-n4
+$color-published: lighten($color-n2, 15%)
+$color-codedev: $color-n5
+
+$color-undergradtimeline: lighten($color-mipt, 10%)
+$color-phdtimeline: lighten($color-princeton, 10%)
+
 
 @mixin gradient($direction, $list)
   background: -webkit-linear-gradient($direction, $list)
@@ -21,10 +60,16 @@ $small-screen: 992px
   background: -o-linear-gradient($direction, $list)
   background: linear-gradient($direction, $list)
 
-$lightblue: #41B6E6
-$lightpink: #DB3EB1
+::-moz-selection
+  color: $whiteish
+  background: darken($color-n3, 10%)
+
+::selection
+  color: $whiteish
+  background: darken($color-n3, 10%)
 
 body
+
   font-family: $main-font
   @media screen and (min-width: $small-screen)
     font-size: $main-fontsize
@@ -58,6 +103,7 @@ header video
 header #header
   position: relative
   z-index: 2
+  color: $color-header-text
 
 header .overlay
   position: absolute
@@ -65,18 +111,19 @@ header .overlay
   left: 0
   height: 100%
   width: 100%
-  background-color: coral
+  background-color: $color-jumbotron
   opacity: 0.8
   z-index: 1
 
-#header
+header
   @media screen and (min-width: $small-screen)
-    height: 720px
+    height: 968px
   @media screen and (max-width: $small-screen)
-    min-height: 720px
-
+    min-height: 1440px
   #tag-row p
     line-height: 2rem
+  #header
+    height: 100%
 
 #header
   @media screen and (max-width: $small-screen)
@@ -85,9 +132,11 @@ header .overlay
     #tag-row
       height: 25%
       p
+        font-size: 1em
         line-height: 2em
-      mark
-        background: transparentize($color-highlight, 0.45)
+  mark
+    background: transparentize($color-tag-outline, 0.45)
+    color: $color-header-text
   @media screen and (min-width: $small-screen)
     #header-row
       height: 90%
@@ -122,14 +171,14 @@ header .overlay
     bottom: 0px
     left: 0px
     border-style: solid
-    border-color: white
+    border-color: $color-header-text
 
   &:after
     border-top: 0px
     border-right: 0px
 
   &:before
-    @include gradient(right, ($lightblue, $lightpink))
+    @include gradient(right, ($grad-color-n1, $grad-color-n2))
     border-bottom: 0px
     border-left: 0px
 
@@ -176,9 +225,9 @@ header .overlay
   font-size: 0.8em
   margin-top: 20px
   margin-bottom: 20px
-
   a
-    color: #212529
+    color: $color-header-text
+
 
 @media screen and (min-width: $small-screen)
   .title, #header #tag-row
@@ -194,8 +243,7 @@ header .overlay
 .slash_divider:before
   font-family: monospace
   font-size: 1em
-  color: black
-
+  color: $color-header-text
 
 .slash_divider
   @media screen and (max-width: $small-screen)
@@ -210,28 +258,118 @@ header .overlay
       text-align: left
 
 /* PUBLICATIONS
+#publications
+  font-family: $pubs-font
+  h1
+    font-family: $main-font
+    @media screen and (min-width: $small-screen)
+      margin-top: 80px
+  .card
+    border: hidden
 
-.card
-  border: hidden
+  .highlight
+    background: $color-publication-highlight
+    padding: 2px 5px
+    display: inline-block
 
-.highlight
-  background: $color-highlight
-  padding: 2px 5px
-  display: inline-block
+  .text-muted
+    display: none
 
-.text-muted
-  display: none
-
-.card-columns
-  @media screen and (min-width: $small-screen)
-    column-count: 3
-  @media screen and (max-width: $small-screen)
-    column-count: 1
+  .card-columns
+    @media screen and (min-width: $small-screen)
+      column-count: 3
+    @media screen and (max-width: $small-screen)
+      column-count: 1
 
 /* TIMELINE
 
+#timeline
+  background-color: $blackish
+
+  #timeline-title h1
+    color: $whiteish
+    border-bottom: 1px solid transparentize($grayish, 0.75)
+
+  #timeline-legend
+    @media screen and (max-width: $small-screen)
+      display: none
+
+    position: absolute
+    left: 15%
+    right: 15%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    border-top: none
+    border-radius: 0 0 10px 10px
+    line-height: 2rem
+    background-color: $color-timeline-legend-bg
+    .legend-mipt
+      background-color: $color-undergradtimeline
+    .legend-princeton
+      background-color: $color-phdtimeline
+    .legend-unpublished
+      background-color: $color-unpublished
+    .legend-published
+      background-color: $color-published
+    .legend-codedev
+      background-color: $color-codedev
+
+    ul
+      float: middle
+      padding-left: 0px
+      list-style: none
+      margin-top: 6px
+      span
+        margin-left: 35px
+        margin-right: 10px
+        display: inline-block
+        height: 25px
+        width: 25px
+        margin-bottom: -5px
+        border-radius: 0
+      li:nth-last-child(-n + 3)
+        span
+          border-radius: 50%
+      li
+        display: inline-block
+        list-style: none
+        vertical-align: text-top
+
 .mytimeline
   font-family: $main-font
+
+  .tl-slidenav-title, .tl-slidenav-description
+    display: none
+
+  .tl-timemarker-content-container, .tl-timemarker-timespan-content
+    border: none
+    border-radius: 5px 5px 0 0 !important
+    .tl-headline
+      font-size: 3vi
+      line-height: 3vi
+      color: $whiteish !important
+      text-shadow: 1px 1px 3px $blackish
+
+  .tl-timeera-text .tl-headline
+    color: $color-timeline-eratext !important
+    font-size: 1em !important
+    line-height: 1.5em !important
+
+  .tl-timeera-content-container
+    border: none
+
+  .tl-slidenav-description
+    font-size: 1rem
+  @media screen and (max-width: $small-screen)
+    .tl-timenav
+      display: none
+    .tl-storyslider
+      height: 100% !important
+    .tl-slidenav-icon
+      margin: 0px !important
+      &:before
+        font-size: 2em
 
   .tl-attribution
     display: none
@@ -242,27 +380,8 @@ header .overlay
   .tl-menubar
     display: none
 
-  .tl-slidenav-content-container
-    &:hover
-      .tl-slidenav-title, .tl-slidenav-description
-        opacity: 1
-
-    .tl-slidenav-title, .tl-slidenav-description
-      text-shadow: none !important
-      opacity: 0.45
-      color: #CCC !important
-
-  .tl-timegroup-message
-    margin-left: 40px
-    text-shadow: none
-    color: #CCC
-
-  .tl-timemarker-content-container
-    box-shadow: none !important
-    border-radius: 0px
-
-  .tl-timemarker h2
-    color: #CCC !important
+  .tl-timeaxis-tick-text
+    color: $whiteish
 
   .tl-timeera-color1 .tl-timeera-background
     background-color: $color-undergradtimeline !important
@@ -276,11 +395,98 @@ header .overlay
   .tl-timeaxis-minor
     display: none !important
 
-  #gs_01-marker .tl-timemarker-content-container, #gs_03-marker .tl-timemarker-content-container
+  .tl-timegroup-message
+    display: none
+
+  .tl-timemarker-timespan
+    background: transparent !important
+  .tl-timemarker-timespan-content
+    z-index: 10 !important
+
+  .tl-timemarker-content-container
+    z-index: 11 !important
+
+  .tl-timemarker-content-container
+    background-color: transparentize($whiteish, 1) !important
+
+  #gs_01, #gs_03
+    h5 mark
+      background: transparentize($color-unpublished, 0.5)
+      color: $whiteish
+  #gs_02, #gs_04
+    h5 mark
+      background: transparentize($color-published, 0.5)
+      color: $whiteish
+  #gs_05
+    h5 mark
+      background: transparentize($color-codedev, 0.1)
+      color: $whiteish
+  #gs_01
+    &:after
+      background: url('../files/sdwave.gif')
+  #gs_02
+    &:after
+      background: url('../files/sauron.png')
+      background-size: cover
+  #gs_03
+    &:after
+      background: url('../files/turb.gif')
+  #gs_04
+    &:after
+      background: url('../files/rec.png')
+      background-size: cover
+  #gs_05
+    &:after
+      background: url('../files/tv2.png')
+      background-size: cover
+      filter: blur(3px)
+      -webkit-filter: blur(3px)
+
+  .tl-slide
+    .tl-headline
+      display: none
+    .tl-slide-content
+      width: 100% !important
+      padding: 0 !important
+    &:after
+      content: ""
+      opacity: 0.2
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      position: absolute
+    h5 mark
+      border-radius: 5px
+      padding: 5px 10px
+    p mark
+      background: transparentize($color-tag-outline, 0.5)
+      color: $whiteish
+      border-radius: 5px
+      padding: 4px 4px
+    ul, a, h2, p
+      color: $whiteish
+    a
+      text-decoration: underline
+
+  #gs_01-marker .tl-timemarker-timespan-content, #gs_03-marker .tl-timemarker-timespan-content
     background-color: $color-unpublished
 
-  #gs_02-marker .tl-timemarker-content-container, #gs_04-marker .tl-timemarker-content-container
+  #gs_02-marker .tl-timemarker-timespan-content,
+  #gs_04-marker .tl-timemarker-timespan-content,
+  #bs_01-marker .tl-timemarker-timespan-content,
+  #bs_02-marker .tl-timemarker-timespan-content,
+  #bs_03-marker .tl-timemarker-timespan-content
     background-color: $color-published
 
-  #gs_05-marker .tl-timemarker-content-container
+  #gs_05-marker .tl-timemarker-timespan-content
     background-color: $color-codedev
+
+  #gs_06-marker, #gs_07-marker
+    .tl-timemarker-line-right
+      display: none
+    .tl-timemarker-timespan-content
+      @include gradient(left, ($color-unpublished, transparentize($color-unpublished, 0.5), transparentize($color-unpublished, 1)))
+
+.footer-copyright
+  color: darken($grayish, 20%)

@@ -2,7 +2,7 @@
   "eras": [
     {
       "text": {
-        "headline": "PhD @ Princeton"
+        "headline": ""
       },
       "start_date": {
         "month": "9",
@@ -15,7 +15,7 @@
     },
     {
       "text": {
-        "headline": "BSc + MS @ MIPT"
+        "headline": ""
       },
       "start_date": {
         "month": "9",
@@ -31,20 +31,65 @@
     {
       "start_date": {
         "month": "9",
+        "year": "2011"
+      },
+      "end_date": {
+        "month": "6",
+        "year": "2013"
+      },
+      "display_date": "2nd-3rd years of undergrad",
+      "text": {
+        "headline": "Contraining gravitational rainbows",
+        "text": "<h2>Constraining gravitational chromaticity from radio observations</h2><p>balabol blabla bla</p>"
+      },
+      "unique_id": "bs_01"
+    },
+    {
+      "start_date": {
+        "month": "9",
+        "year": "2012"
+      },
+      "end_date": {
+        "month": "6",
+        "year": "2014"
+      },
+      "display_date": "3rd-4th years of undergrad",
+      "text": {
+        "headline": "Pulsar radio images",
+        "text": "<h2>Predicting the \"image\" of a radio pulsar</h2><p>balabol blabla bla</p>"
+      },
+      "unique_id": "bs_02"
+    },
+    {
+      "start_date": {
+        "month": "9",
+        "year": "2014"
+      },
+      "end_date": {
+        "month": "6",
+        "year": "2016"
+      },
+      "display_date": "1st-2nd years of masters",
+      "text": {
+        "headline": "Pulsar light curves and polarization",
+        "text": "<h2>Building radio pulsar lightcurves and polarization maps</h2><p>balabol blabla bla</p>"
+      },
+      "unique_id": "bs_03"
+    },
+    {
+      "start_date": {
+        "month": "9",
         "year": "2016"
       },
       "end_date": {
         "month": "6",
         "year": "2017"
       },
-      "display_date": "1st year",
+      "display_date": "1st year of PhD",
       "text": {
-        "headline": "Bla bla"
+        "headline": "Growth of ion acoustic waves",
+        "text": "<h2>Growth of isolated ion acoustic modes in the shearing box</h2><h5><mark>unfinished semester project with M. Kunz</mark></h5><p>In 3D hybrid-PIC MRI simulations it is observed that certain ion acoustic oscillations were being Landau-damped while others were picked up and amplified by mirror instability. Presumably this is due to the fact that shearing is amplifying the pressure anisotropy for some modes, and the mirror threshold is being reached before the wave are damped. Our goal was to study this effect in a localized 2D shearing simulation with an isolated ion acoustic mode and compare the results with analytic predictions.</p><p>skills: <mark>hybrid-PIC simulations</mark>, <mark>plasma theory</mark></p>"
       },
-      "background": {
-        "url": "https://media.freestocktextures.com/cache/5c/b2/5cb2fad072a5e73efa48051829a91f99.jpg"
-      },
-      "group": "Unpublished",
       "unique_id": "gs_01"
     },
     {
@@ -56,14 +101,11 @@
         "month": "10",
         "year": "2018"
       },
-      "display_date": "1st/2nd year",
+      "display_date": "1st-2nd years of PhD",
       "text": {
-        "headline": "Two-photon pair production in pulsar magnetospheres"
+        "headline": "Two-photon pair production in reconnection",
+        "text": "<h2>Two-photon pair production in pulsar magnetospheres</h2><h5><mark>project with A. Philippov and A. Spitkovsky</mark></h5><p>Magnetic reconnection is thought to power the pulsed high-energy emission from pulsars.  Photons produced via the synchrotron radiation of the accelerated plasma particles, can interact with each other to produce fresh pair-plasma. This process self-balances towards an equilibrium which depends weakly on specific reconnection pulsar conditions. We developed the first-of-its-kind pair-production algorithm for PIC codes coupled to the synchrotron radiation of charged particles to demonstrate this self-balancing phenomenon in localized reconnection simulations.</p><p><a href='https://arxiv.org/abs/1809.10772'>arXiv:1809.10772</a></p><p>skills: <mark>PIC simulations</mark>, <mark>PIC code dev</mark></p>"
       },
-      "background": {
-        "url": "https://media.freestocktextures.com/cache/5c/b2/5cb2fad072a5e73efa48051829a91f99.jpg"
-      },
-      "group": "Published",
       "unique_id": "gs_02"
     },
     {
@@ -75,14 +117,11 @@
         "month": "8",
         "year": "2018"
       },
-      "display_date": "2nd year",
+      "display_date": "2nd year of PhD",
       "text": {
-        "headline": "Current sheats in relativistic MHD turbulence"
+        "headline": "Relativistic MHD turbulence",
+        "text": "<h2>Current sheets in relativistic MHD turbulence</h2><h5><mark>unfinished semester project with J. Stone</mark></h5><p>The role of magnetic reconnection in the relativistic turbulent plasma is uncertain. Our goal was to study the formation and disruption of current sheets in the driven relativistic MHD turbulence. This would allow to understand how quickly the current sheets are formed in tubulent media and how long do they survive.</p><p>skills: <mark>MHD simulations</mark>, <mark>MHD code dev</mark></p>"
       },
-      "background": {
-        "url": "https://media.freestocktextures.com/cache/5c/b2/5cb2fad072a5e73efa48051829a91f99.jpg"
-      },
-      "group": "Unpublished",
       "unique_id": "gs_03"
     },
     {
@@ -94,14 +133,11 @@
         "month": "3",
         "year": "2020"
       },
-      "display_date": "3rd/4th year",
+      "display_date": "3rd-4th years of PhD",
       "text": {
-        "headline": "Plasmoid compression in magnetic reconnection"
+        "headline": "Secondary energization in reconnection",
+        "text": "<h2>Plasmoid compression in magnetic reconnection</h2><h5><mark>project with M. Petropoulou, A. Spitkovsky and L. Sironi</mark></h5><p>We find that particles accelerated in the process of magnetic reconnection get trapped inside the plasmoids where their evolution continues. These particles get energized over time due to the compression of plasmoid interiors. As more plasma is being brought inside the plasmoid, an additional power-law tail emerges at energies exceeding those that can be provided by X-points.</p><p><a href='https://arxiv.org/abs/2006.12530'>arXiv:2006.12530</a></p><p>skills: <mark>PIC simulations</mark>, <mark>plasma theory</mark></p>"
       },
-      "background": {
-        "url": "https://media.freestocktextures.com/cache/5c/b2/5cb2fad072a5e73efa48051829a91f99.jpg"
-      },
-      "group": "Published",
       "unique_id": "gs_04"
     },
     {
@@ -113,15 +149,44 @@
         "month": "8",
         "year": "2020"
       },
-      "display_date": "3rd/5th year",
+      "display_date": "3rd-5th years of PhD",
       "text": {
-        "headline": "`Tristan-MP v2`"
+        "headline": "Tristan-MP v2 development",
+        "text": "<h2>Tristan-MP v2 multi-species QED PIC code</h2><h5><mark>with A. Spitkovsky, A. Philippov and D. Groselj</mark></h5><p>Tristan-MP v2 is the brand new version of the Tristan-MP particle-in-cell code, rewritten from scratch. It currently supports the following features:</p><ul><li>multiple particle species</li><li>synchrotron and inverse-Compton radiation</li><li>two-photon pair production</li><li>Compton scattering</li><li>particle downsampling</li><li>guiding center (GCA) particle pusher</li></ul><p>See details in the <a href='https://ntoles.github.io/tristan-wiki/'>code wiki page</a>.</p><p>skills: <mark>PIC algorithms</mark>, <mark>PIC code dev</mark>, <mark>HPC</mark></p>"
       },
-      "background": {
-        "url": "https://media.freestocktextures.com/cache/5c/b2/5cb2fad072a5e73efa48051829a91f99.jpg"
-      },
-      "group": "Code development",
       "unique_id": "gs_05"
+    },
+    {
+      "start_date": {
+        "month": "5",
+        "year": "2020"
+      },
+      "end_date": {
+        "month": "3",
+        "year": "2021"
+      },
+      "display_date": "4th-5th years of PhD",
+      "text": {
+        "headline": "QED in pulsar magnetospheres",
+        "text": "<h2>Effects of radiation and two-photon pair production in pulsar magnetospheres</h2><h3>Unpublished semester project</h3><p></p>"
+      },
+      "unique_id": "gs_06"
+    },
+    {
+      "start_date": {
+        "month": "2",
+        "year": "2020"
+      },
+      "end_date": {
+        "month": "10",
+        "year": "2021"
+      },
+      "display_date": "PhD+",
+      "text": {
+        "headline": "Exploding force-free magnetic loops",
+        "text": "<h2>Effects of radiation and two-photon pair production in pulsar magnetospheres</h2><p>balabol blabla bla</p>"
+      },
+      "unique_id": "gs_07"
     }
   ]
 }
