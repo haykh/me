@@ -33,8 +33,7 @@ $color-princeton: #e77500
 $color-mipt: #0080ff
 
 // COLORS:
-$grad-color-n1: $color-n3
-$grad-color-n2: $color-n2
+$gradient-colors: $color-n2, $color-n3, $color-n5
 
 $color-jumbotron: $blackish
 $color-header-text: $whiteish
@@ -111,8 +110,6 @@ header .overlay
   left: 0
   height: 100%
   width: 100%
-  background-color: $color-jumbotron
-  opacity: 0.8
   z-index: 1
 
 header
@@ -178,7 +175,7 @@ header
     border-right: 0px
 
   &:before
-    @include gradient(right, ($grad-color-n1, $grad-color-n2))
+    @include gradient(right, $gradient-colors)
     border-bottom: 0px
     border-left: 0px
 
@@ -426,18 +423,18 @@ header
       background: url('../files/sdwave.gif')
   #gs_02
     &:after
-      background: url('../files/sauron.png')
+      background: url('../files/sauron.jpeg')
       background-size: cover
   #gs_03
     &:after
       background: url('../files/turb.gif')
   #gs_04
     &:after
-      background: url('../files/rec.png')
+      background: url('../files/rec.jpeg')
       background-size: cover
   #gs_05
     &:after
-      background: url('../files/tv2.png')
+      background: url('../files/tv2.jpeg')
       background-size: cover
       filter: blur(3px)
       -webkit-filter: blur(3px)

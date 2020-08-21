@@ -49,8 +49,6 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #2f2f2f;
-  opacity: 0.8;
   z-index: 1; }
 
 @media screen and (min-width: 992px) {
@@ -111,10 +109,10 @@ header #header {
     border-top: 0px;
     border-right: 0px; }
   #mypiccontainer:before {
-    background: -webkit-linear-gradient(right, #F4D8CD, #1E555C);
-    background: -moz-linear-gradient(right, #F4D8CD, #1E555C);
-    background: -o-linear-gradient(right, #F4D8CD, #1E555C);
-    background: linear-gradient(right, #F4D8CD, #1E555C);
+    background: -webkit-linear-gradient(right, #1E555C, #F4D8CD, #F15152);
+    background: -moz-linear-gradient(right, #1E555C, #F4D8CD, #F15152);
+    background: -o-linear-gradient(right, #1E555C, #F4D8CD, #F15152);
+    background: linear-gradient(right, #1E555C, #F4D8CD, #F15152);
     border-bottom: 0px;
     border-left: 0px; }
 
@@ -327,15 +325,15 @@ header #header {
   .mytimeline #gs_01:after {
     background: url("../files/sdwave.gif"); }
   .mytimeline #gs_02:after {
-    background: url("../files/sauron.png");
+    background: url("../files/sauron.jpeg");
     background-size: cover; }
   .mytimeline #gs_03:after {
     background: url("../files/turb.gif"); }
   .mytimeline #gs_04:after {
-    background: url("../files/rec.png");
+    background: url("../files/rec.jpeg");
     background-size: cover; }
   .mytimeline #gs_05:after {
-    background: url("../files/tv2.png");
+    background: url("../files/tv2.jpeg");
     background-size: cover;
     filter: blur(3px);
     -webkit-filter: blur(3px); }
