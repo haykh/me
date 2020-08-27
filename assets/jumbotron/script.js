@@ -49,6 +49,16 @@ const jumbotron_s = (sketch) => {
     sketch.resizeCanvas(width, height);
   }
 
+  sketch.mouseClicked = () => {
+    let prtl = sketch.random(particles);
+    prtl.x = sketch.mouseX;
+    prtl.y = sketch.mouseY;
+    // ellipse(mouseX, mouseY, 5, 5);
+    // // prevent default
+    // return false;
+  }
+
+
   class Particle {
     constructor() {
       this.reset();
