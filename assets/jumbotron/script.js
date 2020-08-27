@@ -12,8 +12,8 @@ const jumbotron_s = (sketch) => {
   var time = 0, delta_time = 0.002;
   var ITER = 0;
 
-  var positiveColor = '#F15152';
-  var negativeColor = '#1E555C';
+  var positiveColor = '#db3340';
+  var negativeColor = '#28abe3';
 
   var dS = 20;
 

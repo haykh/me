@@ -7,22 +7,25 @@ $small-screen: 992px
 
 $my-image: url("../images/mypic1.png")
 
+$header-width-normal: 720px
+$header-width-mobile: 1080px
+
 // COLORS PALETTE
-// $color-n1: #db3340
-// $color-n2: #e8b81a
-// $color-n3: #f7eac8
-// $color-n4: #20da9b
-// $color-n5: #28abe3
+$color-n1: #db3340
+$color-n2: #e8b81a
+$color-n3: #f7eac8
+$color-n4: #20da9b
+$color-n5: #28abe3
 
 // $color-n1: #DB3EB1
 // $color-n5: #41B6E6
-
-$colors: #3A2E39, #1E555C, #F4D8CD, #EDB183, #F15152
-$color-n1: nth($colors, 1)
-$color-n2: nth($colors, 2)
-$color-n3: nth($colors, 3)
-$color-n4: nth($colors, 4)
-$color-n5: nth($colors, 5)
+//
+// $colors: #3A2E39, #1E555C, #F4D8CD, #EDB183, #F15152
+// $color-n1: nth($colors, 1)
+// $color-n2: nth($colors, 2)
+// $color-n3: nth($colors, 3)
+// $color-n4: nth($colors, 4)
+// $color-n5: nth($colors, 5)
 
 
 $whiteish: #f2f2f2
@@ -33,7 +36,7 @@ $color-princeton: #e77500
 $color-mipt: #0080ff
 
 // COLORS:
-$gradient-colors: $color-n2, $color-n3, $color-n5
+$gradient-colors: $color-n5, $color-n1
 
 $color-jumbotron: $blackish
 $color-header-text: $whiteish
@@ -45,9 +48,10 @@ $color-timeline-legend-bg: $whiteish
 $color-timeline-eratext: $blackish
 $color-legend-divider: $blackish
 
-$color-unpublished: $color-n4
-$color-published: lighten($color-n2, 15%)
+$color-unpublished: $color-n2
+$color-published: darken($color-n4, 15%)
 $color-codedev: $color-n5
+$color-inprogress: $color-n1
 
 $color-undergradtimeline: lighten($color-mipt, 10%)
 $color-phdtimeline: lighten($color-princeton, 10%)
@@ -77,14 +81,6 @@ body
 
 /* JUMBOTRON
 
-header
-  position: relative
-  background-color: black
-  height: 75vh
-  min-height: 25rem
-  width: 100%
-  overflow: hidden
-
 header video
   position: absolute
   top: 50%
@@ -113,10 +109,11 @@ header .overlay
   z-index: 1
 
 header
+  position: relative
   @media screen and (min-width: $small-screen)
-    height: 968px
+    height: $header-width-normal
   @media screen and (max-width: $small-screen)
-    min-height: 1440px
+    min-height: $header-width-mobile
   #tag-row p
     line-height: 2rem
   #header
@@ -263,6 +260,7 @@ header
       margin-top: 80px
   .card
     border: hidden
+    background: none
 
   .highlight
     background: $color-publication-highlight
@@ -287,19 +285,16 @@ header
     color: $whiteish
     border-bottom: 1px solid transparentize($grayish, 0.75)
 
-  #timeline-legend
+  .timeline-legend
     @media screen and (max-width: $small-screen)
       display: none
-
     position: absolute
-    left: 15%
-    right: 15%
     margin-left: auto
     margin-right: auto
     text-align: center
     border-top: none
-    border-radius: 0 0 10px 10px
     line-height: 2rem
+    padding-right: 25px
     background-color: $color-timeline-legend-bg
     .legend-mipt
       background-color: $color-undergradtimeline
@@ -311,6 +306,8 @@ header
       background-color: $color-published
     .legend-codedev
       background-color: $color-codedev
+    .legend-inprogress
+      background-color: $color-inprogress
 
     ul
       float: middle
@@ -324,14 +321,22 @@ header
         height: 25px
         width: 25px
         margin-bottom: -5px
-        border-radius: 0
-      li:nth-last-child(-n + 3)
-        span
-          border-radius: 50%
       li
         display: inline-block
         list-style: none
         vertical-align: text-top
+
+  #timeline-legend-1
+    border-radius: 0 0 10px 0
+    left: 0
+    ul span
+      border-radius: 0
+
+  #timeline-legend-2
+    border-radius: 0 0 0 10px
+    right: 0
+    ul span
+      border-radius: 50%
 
 .mytimeline
   font-family: $main-font
@@ -406,11 +411,15 @@ header
   .tl-timemarker-content-container
     background-color: transparentize($whiteish, 1) !important
 
+  #gs_07, #gs_06
+    h5 mark
+      background: transparentize($color-inprogress, 0.5)
+      color: $whiteish
   #gs_01, #gs_03
     h5 mark
       background: transparentize($color-unpublished, 0.5)
       color: $whiteish
-  #gs_02, #gs_04
+  #bs_01, #bs_02, #bs_03, #gs_02, #gs_04
     h5 mark
       background: transparentize($color-published, 0.5)
       color: $whiteish
@@ -418,6 +427,21 @@ header
     h5 mark
       background: transparentize($color-codedev, 0.1)
       color: $whiteish
+  #bs_01
+    &:after
+      background: url('../files/astrometry.jpg')
+      background-size: cover
+      background-position: center
+  #bs_02
+    &:after
+      background: url('../files/psr_img.jpg')
+      background-size: cover
+      background-position: center
+  #bs_03
+    &:after
+      background: url('../files/psr_pol.jpg')
+      background-size: cover
+      background-position: center
   #gs_01
     &:after
       background: url('../files/sdwave.gif')
@@ -438,6 +462,11 @@ header
       background-size: cover
       filter: blur(3px)
       -webkit-filter: blur(3px)
+  #gs_06
+    &:after
+      background: url('../files/psr.gif')
+      background-size: cover
+      background-position: center
 
   .tl-slide
     .tl-headline
@@ -483,7 +512,9 @@ header
     .tl-timemarker-line-right
       display: none
     .tl-timemarker-timespan-content
-      @include gradient(left, ($color-unpublished, transparentize($color-unpublished, 0.5), transparentize($color-unpublished, 1)))
+      @include gradient(left, ($color-inprogress, transparentize($color-inprogress, 0.5), transparentize($color-inprogress, 1)))
 
 .footer-copyright
   color: darken($grayish, 20%)
+  span
+    color: red

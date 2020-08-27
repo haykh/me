@@ -3,6 +3,10 @@
 <head>
   <meta name="viewport" content="width=968">
   <title>@hayk</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -72,21 +76,26 @@
     <div class="row">
       <div id='timeline-embed' style="width: 100%; height: 768px"></div>
     </div>
-    <div id='timeline-legend' class='shadow'>
+    <div id='timeline-legend-1' class='timeline-legend shadow'>
       <ul class='legend-labels'>
         <li><span class='legend-mipt'></span>BSc/MSc @ MIPT</li>
         <li><span class='legend-princeton'></span>PhD @ Princeton</li>
+      </ul>
+    </div>
+    <div id='timeline-legend-2' class='timeline-legend shadow'>
+      <ul class='legend-labels'>
         <li><span class='legend-unpublished'></span>Unpublished</li>
         <li><span class='legend-published'></span>Published</li>
         <li><span class='legend-codedev'></span>Code development</li>
+        <li><span class='legend-inprogress'></span>In progress/future</li>
       </ul>
     </div>
   </div>
 
   <script type="text/javascript">
     var additionalOptions = {
-      start_at_slide: 7,
-      initial_zoom: 2,
+      start_at_slide: 2,
+      initial_zoom: 1,
       timenav_height_percentage: 20,
       timenav_mobile_height_percentage: 40,
       duration: 300,
@@ -172,7 +181,7 @@
 
   <footer>
     <div class="shadow-lg footer-copyright text-right py-3 pr-3">
-      from Arina with ♥
+      from Arina with <span>♥</span>
     </div>
   </footer>
 
