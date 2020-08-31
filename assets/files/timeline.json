@@ -40,7 +40,7 @@
       "display_date": "2nd-3rd years of undergrad",
       "text": {
         "headline": "Contraining gravitational rainbows",
-        "text": "<h2>Constraining gravitational chromaticity from radio observations</h2><p>balabol blabla bla</p>"
+        "text": "<h2>Constraining gravitational chromaticity from radio observations</h2><h5><mark>with S. Troitsky, P. Egorov, and M. Guzinin</mark></h5><p>While the deflection of light is achromatic in General Relativity, it is not always so in several new-physics models (e.g. certain quantum-gravity and string-inspired models, models with nonminimal photon-gravity coupling or with massive photon etc.). We discuss how parameters of these models may be constrained by precise astrometry at different wavelenghts. From published observations of the gravitational lens MG J2016+112, we obtain world-best limits on chromatic gravitational deflection of light (and the unique limit on the photon mass relevant for distance scales >Mpc).</p><p><a href='https://arxiv.org/abs/1306.2716'>arXiv:1306.2716</a></p><p>skills: <mark>observational data analysis</mark>, <mark>GR analytics</mark></p>"
       },
       "unique_id": "bs_01"
     },
@@ -56,7 +56,7 @@
       "display_date": "3rd-4th years of undergrad",
       "text": {
         "headline": "Pulsar radio images",
-        "text": "<h2>Predicting the \"image\" of a radio pulsar</h2><p>balabol blabla bla</p>"
+        "text": "<h2>Predicting the \"image\" of a radio pulsar</h2><h5><mark>with V. Beskin</mark></h5><p>Radioemission is most likely generated deep in the pulsar magnetosphere. As it travels outwards, this electromagnetic wave is prone to refraction due to plasma filling the entire magnetosphere. Given the structure of the magnetosphere and assuming realistic plasma parameters, we reconstruct the resulting refracted image as it could be recorded by high resolution radio telescope, and study its dependance on various plasma parameters.</p><p><a href='https://arxiv.org/abs/1410.4581'>arXiv:1410.4581</a></p><p>skills: <mark>radiation transfer simulations</mark></p>"
       },
       "unique_id": "bs_02"
     },
@@ -72,7 +72,7 @@
       "display_date": "1st-2nd years of masters",
       "text": {
         "headline": "Pulsar light curves and polarization",
-        "text": "<h2>Building radio pulsar lightcurves and polarization maps</h2><p>balabol blabla bla</p>"
+        "text": "<h2>Building radio pulsar lightcurves and polarization maps</h2><h5><mark>with V. Beskin and A. Philippov</mark></h5><p>The polarization of radio emission from pulsars is formed in the pulsar magnetosphere. As such it carries an imprint of plasma conditions in the magnetosphere. We study what geometric and plasma parameters affect the polarization maps of pulsars, and propose a method to estimate certain plasma properties from the observed polarized lightcurves.</p><p><a href='https://arxiv.org/abs/1704.08743'>arXiv:1704.08743</a></p><p>skills: <mark>polarized radiation transfer simulations</mark></p>"
       },
       "unique_id": "bs_03"
     },
@@ -168,7 +168,7 @@
       "display_date": "4th-5th years of PhD",
       "text": {
         "headline": "QED in pulsar magnetospheres",
-        "text": "<h2>Effects of radiation and two-photon pair production in pulsar magnetospheres</h2><h5><mark>with A. Spitkovsky and A. Philippov</mark></h5><p>With the brand new version of our Tristan-MP v2 particle-in-cell code on rails, we aim to study the pair loading of the pulsar current sheet via the two-photon pair production mechanism. While the localized version proved the viability of this process to self-regulate the current sheet with additional pair loading, it remains an open question how efficient this process is in a dynamically evolving current sheet, how much effect does this process impose on the emerging photon spectrum and what is the further dynamics of the newly produced pair plasma.</p><p>skills: <mark>PIC simulations</mark>"
+        "text": "<h2>Effects of radiation and two-photon pair production in pulsar magnetospheres</h2><h5><mark>with A. Spitkovsky and A. Philippov</mark></h5><p>With the brand new version of our Tristan-MP v2 particle-in-cell code on rails, we aim to study the pair loading of the pulsar current sheet via the two-photon pair production mechanism. While the localized version proved the viability of this process to self-regulate the current sheet with additional pair loading, it remains an open question how efficient this process is in a dynamically evolving current sheet, how much effect does this process impose on the emerging photon spectrum and what is the further dynamics of the newly produced pair plasma.</p><p>skills: <mark>PIC simulations</mark></p>"
       },
       "unique_id": "gs_06"
     },
@@ -183,8 +183,8 @@
       },
       "display_date": "PhD+",
       "text": {
-        "headline": "Exploding force-free magnetic loops",
-        "text": "<h2>...</h2><p>balabol blabla bla</p>"
+        "headline": "Hard state of XRBs",
+        "text": "<h2>Explosion of magnetic loops in black-hole accretion disk coronae</h2><p>Thin black-hole accretion disks in X-ray binaries are thought to host a magnetized corona atop the dense high-beta regions. Magnetic field loops, buoyantly being pushed out from the disk into corona, dissipates its energy via the reconnection. This process is mediated by two-photon pair production and annihilation, the balance between which controls the effective optical depth. These extreme transients can be studied in localized simulations of the exploding coronal loops: a setup which is computationally feasible to reproduce, and which will capture the key microphysics and bulk plasma dynamics of the system. I am eager to study this process of twisted loop reconnection with particle-in-cell plasma simulations; the Tristan-MP v2 code I developed throughout my PhD conveniently incorporates all the necessary algorithms for extra physics (such as Compton scattering, pair production etc).</p>"
       },
       "unique_id": "gs_07"
     }
